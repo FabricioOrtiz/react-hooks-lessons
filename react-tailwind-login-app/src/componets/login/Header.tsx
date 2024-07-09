@@ -1,11 +1,15 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export function Header(
-    heading: any,
-    paragraph: any,
-    linkName: any,
-    linkUrl='#'
-) {
+
+interface Props {
+    heading: string,
+    paragraph: string,
+    linkName: string,
+    linkUrl: string
+}
+
+const Header: React.FC<Props> = ({heading, paragraph, linkUrl, linkName}) => {
     return (
         <div className="mb-10">
             <div className="flex justify-center">
@@ -26,3 +30,5 @@ export function Header(
         </div>
     );
 }
+
+export default Header;
